@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      #canvas-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place behind other elements to act as background */
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="canvas-particles"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvasparticles-js/canvasParticles.min.js"></script>
+    <script>
+      const selector = '#canvas-particles'
+      const options = {
+        background: '#fff',
+        framesPerUpdate: 1,
+        animation: {
+            startOnEnter: true,
+            stopOnLeave: true
+        },
+        mouse: {
+          interactionType: CanvasParticles.interactionType.MOVE, // MOVE === 2
+          connectDistMult: 0.6,
+          distRatio: 1
+        },
+        particles: {
+          color: '#34500d',
+          max: 1000,
+          ppm: 500,
+          maxWork: 30,
+          connectDistance:100,
+          relSize: 1,
+          relSpeed: 1,
+          rotationSpeed: 1,
+          regenerateOnResize: false
+        },
+        gravity: {
+            repulsive: 0.55,
+            pulling: 0,
+            friction: 0.99
+        }
+      }
+      new CanvasParticles(selector, options).start()
+    </script>
+  </body>
+</html>
+
