@@ -1,0 +1,907 @@
+<metadata>
+	<eainfo>
+		<overview>
+			<eadetcit>https://www.epa.gov/enviroatlas/enviroatlas-fact-sheets</eadetcit>
+			<eaover>This layer summarizes the U.S. Department of Agriculture (USDA) Census of Agriculture, detailing the number of farm operations that manage cattle, the number of heads on their property at the end of the Census year, and the numbers of small, medium, and large operations for each county in the United States. This layer includes the Census years 2002, 2007, 2012, and 2017.
+
+The Census withholds the number of heads produced in a county if that data could be used to identify individual operations. Data withheld by the Census are represented in this layer by a null value. A value of zero reflects a true absence. For more information, see question #8 in the Census of Agriculture FAQ at https://www.nass.usda.gov/AgCensus/FAQ/2017/index.php.</eaover>
+		</overview>
+		<detailed Name="cattle">
+			<enttyp>
+				<enttypl Sync="TRUE">cattle</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">3079</enttypc>
+				<enttypd>County</enttypd>
+				<enttypds>US Census Bureau</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">OBJECTID</attrlabl>
+				<attalias Sync="TRUE">OBJECTID</attalias>
+				<attrtype Sync="TRUE">OID</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attwidth Sync="TRUE">0</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">state</attrlabl>
+				<attalias Sync="TRUE">State</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">255</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>State name</attrdef>
+				<attrdefs>US Census Bureau</attrdefs>
+				<attrdomv>
+					<udom>Text</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">county</attrlabl>
+				<attalias Sync="TRUE">County</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">255</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>County name</attrdef>
+				<attrdefs>US Census Bureau</attrdefs>
+				<attrdomv>
+					<udom>Text</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">st_ansi</attrlabl>
+				<attalias Sync="TRUE">State ANSI code</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">255</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>American National Standards Institute (ANSI) code for the state</attrdef>
+				<attrdefs>US Census Bureau</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>American National Standards Institute (ANSI) Codes</codesetn>
+						<codesets>https://www.census.gov/library/reference/code-lists/ansi.html</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">co_ansi</attrlabl>
+				<attalias Sync="TRUE">County ANSI code</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">255</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>American National Standards Institute (ANSI) code for the county</attrdef>
+				<attrdefs>US Census Bureau</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>American National Standards Institute (ANSI) Codes</codesetn>
+						<codesets>https://www.census.gov/library/reference/code-lists/ansi.html</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">sector</attrlabl>
+				<attalias Sync="TRUE">Sector</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">255</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Sector of livestock and poultry production associated with the data (equals "CATTLE" for this dataset)</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<udom>Text</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">large_AFOs_2002</attrlabl>
+				<attalias Sync="TRUE">Number of large operations in 2002</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed 200 or more heads in 2002</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>342</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">large_AFOs_2007</attrlabl>
+				<attalias Sync="TRUE">Number of large operations in 2007</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed 200 or more heads in 2007</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>348</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">large_AFOs_2012</attrlabl>
+				<attalias Sync="TRUE">Number of large operations in 2012</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed 200 or more heads in 2012</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>331</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">large_AFOs_2017</attrlabl>
+				<attalias Sync="TRUE">Number of large operations in 2017</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed 200 or more heads in 2017</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>304</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">medium_AFOs_2002</attrlabl>
+				<attalias Sync="TRUE">Number of medium operations in 2002</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed between 50 and 199 heads in 2002</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1935</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">medium_AFOs_2007</attrlabl>
+				<attalias Sync="TRUE">Number of medium operations in 2007</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed between 50 and 199 heads in 2007</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1892</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">medium_AFOs_2012</attrlabl>
+				<attalias Sync="TRUE">Number of medium operations in 2012</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed between 50 and 199 heads in 2012</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1893</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">medium_AFOs_2017</attrlabl>
+				<attalias Sync="TRUE">Number of medium operations in 2017</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed between 50 and 199 heads in 2017</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1508</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">small_AFOs_2002</attrlabl>
+				<attalias Sync="TRUE">Number of small operations in 2002</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed less than 50 heads in 2002</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1961</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">small_AFOs_2007</attrlabl>
+				<attalias Sync="TRUE">Number of small operations in 2007</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed less than 50 heads in 2007</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>2061</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">small_AFOs_2012</attrlabl>
+				<attalias Sync="TRUE">Number of small operations in 2012</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed less than 50 heads in 2012</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>2287</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">small_AFOs_2017</attrlabl>
+				<attalias Sync="TRUE">Number of small operations in 2017</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed less than 50 heads in 2017</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>2312</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_AFOs_2002</attrlabl>
+				<attalias Sync="TRUE">Number of operations in 2002</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed any number of heads in 2002</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>3152</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_AFOs_2007</attrlabl>
+				<attalias Sync="TRUE">Number of operations in 2007</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed any number of heads in 2007</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>3142</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_AFOs_2012</attrlabl>
+				<attalias Sync="TRUE">Number of operations in 2012</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed any number of heads in 2012</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>3214</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_AFOs_2017</attrlabl>
+				<attalias Sync="TRUE">Number of operations in 2017</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of operations that managed any number of heads in 2017</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>2623</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_heads_2002</attrlabl>
+				<attalias Sync="TRUE">Number of heads in 2002</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of heads managed by operations in 2002. Null = Data withheld by the Census</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>900124</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_heads_2007</attrlabl>
+				<attalias Sync="TRUE">Number of heads in 2007</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of heads managed by operations in 2007. Null = Data withheld by the Census</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1071956</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_heads_2012</attrlabl>
+				<attalias Sync="TRUE">Number of heads in 2012</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of heads managed by operations in 2012. Null = Data withheld by the Census</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1086130</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="FALSE">total_heads_2017</attrlabl>
+				<attalias Sync="TRUE">Number of heads in 2017</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef>Number of heads managed by operations in 2017. Null = Data withheld by the Census</attrdef>
+				<attrdefs>US EPA</attrdefs>
+				<attrdomv>
+					<rdom xmlns=""><rdommin>0</rdommin>
+						<rdommax>1057272</rdommax></rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape_Length</attrlabl>
+				<attalias Sync="TRUE">Shape_Length</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape_Area</attrlabl>
+				<attalias Sync="TRUE">Shape_Area</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<mdChar>
+		<CharSetCd value="004"/>
+	</mdChar>
+	<mdHrLv>
+		<ScopeCd value="005"/>
+	</mdHrLv>
+	<mdContact>
+		<rpIndName>EnviroAtlas Coordinator</rpIndName>
+		<rpOrgName>U.S. Environmental Protection Agency, Office of Research and Development - Center for Public Health and Environmental Assessment (CPHEA), EnviroAtlas</rpOrgName>
+		<rpPosName>Geospatial Data Owner</rpPosName>
+		<rpCntInfo>
+			<cntPhone>
+				<voiceNum tddtty="">(919) 541-3832</voiceNum>
+			</cntPhone>
+			<cntAddress addressType="both">
+				<delPoint>109 T.W. Alexander Drive</delPoint>
+				<city>Research Triangle Park</city>
+				<adminArea>NC</adminArea>
+				<postCode>27709</postCode>
+				<eMailAdd>EnviroAtlas@epa.gov</eMailAdd>
+			</cntAddress>
+			<cntInstr>https://www.epa.gov/enviroatlas</cntInstr>
+		</rpCntInfo>
+		<role>
+			<RoleCd value="007"/>
+		</role>
+	</mdContact>
+	<mdDateSt Sync="TRUE">20230808</mdDateSt>
+	<distInfo>
+		<distTranOps>
+			<onLineSrc>
+				<linkage>https://edg.epa.gov/data/PUBLIC/ORD/ENVIROATLAS</linkage>
+				<linkage>https://enviroatlas.epa.gov/arcgis/rest/services</linkage>
+				<linkage>https://www.epa.gov/enviroatlas/enviroatlas-data</linkage>
+				<linkage>https://www.epa.gov/enviroatlas</linkage>
+				<protocol>download</protocol>
+				<orFunct>
+					<OnFunctCd value="001"/>
+				</orFunct>
+			</onLineSrc>
+			<onLineSrc>
+				<linkage>https://enviroatlas.epa.gov/arcgis/rest/services</linkage>
+				<protocol>ESRI:ArcGIS</protocol>
+				<orFunct>
+					<OnFunctCd value="003"/>
+				</orFunct>
+			</onLineSrc>
+			<onLineSrc>
+				<linkage>https://www.epa.gov/enviroatlas/enviroatlas-data</linkage>
+				<protocol>information</protocol>
+				<orFunct>
+					<OnFunctCd value="002"/>
+				</orFunct>
+			</onLineSrc>
+			<onLineSrc>
+				<linkage>https://www.epa.gov/enviroatlas</linkage>
+				<protocol>information</protocol>
+				<orFunct>
+					<OnFunctCd value="002"/>
+				</orFunct>
+			</onLineSrc>
+		</distTranOps>
+		<distFormat>
+			<formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+		</distFormat>
+	</distInfo>
+	<dataIdInfo>
+		<idCitation xmlns="">
+			<resTitle Sync="FALSE">EnviroAtlas - Cattle Operations by County</resTitle>
+			<citRespParty>
+				<rpOrgName>U.S. Environmental Protection Agency (US EPA)</rpOrgName>
+				<role>
+					<RoleCd value="006"/>
+				</role>
+			</citRespParty>
+			<citRespParty>
+				<rpOrgName>U.S. EPA Office of Research and Development (ORD) - Center for Public Health and Environmental Assessment (CPHEA)</rpOrgName>
+				<rpCntInfo>
+					<cntAddress addressType="">
+						<delPoint>Research Triangle Park, NC</delPoint>
+					</cntAddress>
+				</rpCntInfo>
+				<role>
+					<RoleCd value="010"/>
+				</role>
+			</citRespParty>
+			<date>
+				<createDate>2022-01-26</createDate>
+				<pubDate>2022-03-14</pubDate>
+			</date>
+			<presForm xmlns="">
+				<PresFormCd value="005" Sync="TRUE"/>
+			</presForm>
+		</idCitation>
+		<idStatus>
+			<ProgCd value="001"/>
+		</idStatus>
+		<idPoC>
+			<rpIndName>EnviroAtlas Coordinator</rpIndName>
+			<rpOrgName>U.S. Environmental Protection Agency, Office of Research and Development - Center for Public Health and Environmental Assessment (CPHEA), EnviroAtlas</rpOrgName>
+			<rpPosName>Geospatial Data Owner</rpPosName>
+			<rpCntInfo>
+				<cntPhone>
+					<voiceNum tddtty="">(919) 541-3832</voiceNum>
+				</cntPhone>
+				<cntAddress addressType="both">
+					<delPoint>109 T.W. Alexander Drive</delPoint>
+					<city>Research Triangle Park</city>
+					<adminArea>NC</adminArea>
+					<postCode>27709</postCode>
+					<eMailAdd>EnviroAtlas@epa.gov</eMailAdd>
+				</cntAddress>
+				<cntInstr>https://www.epa.gov/enviroatlas</cntInstr>
+			</rpCntInfo>
+			<role>
+				<RoleCd value="010">Publisher</RoleCd>
+			</role>
+		</idPoC>
+		<resMaint>
+			<maintFreq>
+				<MaintFreqCd value="009"/>
+			</maintFreq>
+		</resMaint>
+		<placeKeys>
+			<thesaName>
+				<resTitle>EPA Place Names</resTitle>
+				<date>
+					<pubDate>2015-01-31</pubDate>
+				</date>
+				<citOnlineRes>
+					<linkage>https://ofmpub.epa.gov/sor_internet/registry/termreg/searchandretrieve/taxonomies/search.do?search=&amp;searchString=&amp;taxonomyName=WBT%20-%20Geographic%20Locations</linkage>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+					<orName>Web Taxonomy - Geographic Locations</orName>
+				</citOnlineRes>
+			</thesaName>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+			<keyword>Alabama</keyword>
+			<keyword>Alaska</keyword>
+			<keyword>Arizona</keyword>
+			<keyword>Arkansas</keyword>
+			<keyword>California</keyword>
+			<keyword>Colorado</keyword>
+			<keyword>Connecticut</keyword>
+			<keyword>Delaware</keyword>
+			<keyword>Florida</keyword>
+			<keyword>Georgia</keyword>
+			<keyword>Hawaii</keyword>
+			<keyword>Idaho</keyword>
+			<keyword>Illinois</keyword>
+			<keyword>Indiana</keyword>
+			<keyword>Iowa</keyword>
+			<keyword>Kansas</keyword>
+			<keyword>Kentucky</keyword>
+			<keyword>Louisiana</keyword>
+			<keyword>Maine</keyword>
+			<keyword>Maryland</keyword>
+			<keyword>Massachusetts</keyword>
+			<keyword>Michigan</keyword>
+			<keyword>Minnesota</keyword>
+			<keyword>Mississippi</keyword>
+			<keyword>Missouri</keyword>
+			<keyword>Montana</keyword>
+			<keyword>Nebraska</keyword>
+			<keyword>Nevada</keyword>
+			<keyword>New Hampshire</keyword>
+			<keyword>New Jersey</keyword>
+			<keyword>New Mexico</keyword>
+			<keyword>New York</keyword>
+			<keyword>North Carolina</keyword>
+			<keyword>North Dakota</keyword>
+			<keyword>Ohio</keyword>
+			<keyword>Oklahoma</keyword>
+			<keyword>Oregon</keyword>
+			<keyword>Pennsylvania</keyword>
+			<keyword>Rhode Island</keyword>
+			<keyword>South Carolina</keyword>
+			<keyword>South Dakota</keyword>
+			<keyword>Tennessee</keyword>
+			<keyword>Texas</keyword>
+			<keyword>United States</keyword>
+			<keyword>Utah</keyword>
+			<keyword>Vermont</keyword>
+			<keyword>Virginia</keyword>
+			<keyword>Washington</keyword>
+			<keyword>Washington, DC</keyword>
+			<keyword>West Virginia</keyword>
+			<keyword>Wisconsin</keyword>
+			<keyword>Wyoming</keyword>
+		</placeKeys>
+		<themeKeys>
+			<thesaName>
+				<resTitle>EPA GIS Keyword Thesaurus</resTitle>
+				<date>
+					<pubDate>2007-11-02</pubDate>
+				</date>
+				<citOnlineRes>
+					<linkage>https://ofmpub.epa.gov/sor_internet/registry/termreg/searchandretrieve/taxonomies/search.do?search=&amp;searchString=&amp;taxonomyName=WBT%20-%20Geographic%20Locations</linkage>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+					<orName>EPA Metadata Technical Specification</orName>
+				</citOnlineRes>
+			</thesaName>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+			<keyword>Agriculture</keyword>
+			<keyword>Climate</keyword>
+			<keyword>Contaminant</keyword>
+			<keyword>Ecosystem</keyword>
+			<keyword>Environment</keyword>
+			<keyword>Health</keyword>
+			<keyword>Waste</keyword>
+		</themeKeys>
+		<resConst>
+			<Consts>
+				<useLimit>None. Please check sources, scale, accuracy, currency and other available information. Please confirm that you are using the most recent copy of both data and metadata.  Acknowledgement of the EPA would be appreciated.</useLimit>
+			</Consts>
+		</resConst>
+		<dataLang>
+			<languageCode value="eng"/>
+			<countryCode value="USA" Sync="TRUE"/>
+		</dataLang>
+		<dataChar>
+			<CharSetCd value="004"/>
+		</dataChar>
+		<resConst>
+			<LegConsts>
+				<accessConsts>
+					<RestrictCd value="009">Unrestricted License</RestrictCd>
+				</accessConsts>
+				<othConsts>https://edg.epa.gov/EPA_Data_License.html</othConsts>
+				<useLimit>EPA Public Domain License</useLimit>
+			</LegConsts>
+		</resConst>
+		<themeKeys>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+			<thesaName>
+				<resTitle>Federal Program Inventory</resTitle>
+				<date>
+					<pubDate>2013-09-16</pubDate>
+				</date>
+				<citOnlineRes>
+					<linkage>https://www.performance.gov/federalprograminventory</linkage>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+					<orName>Federal Program Inventory</orName>
+				</citOnlineRes>
+			</thesaName>
+			<keyword>020:072</keyword>
+			<keyword>020:097</keyword>
+		</themeKeys>
+		<themeKeys>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+			<thesaName>
+				<resTitle>User</resTitle>
+				<date>
+					<pubDate>2022-01-03</pubDate>
+				</date>
+			</thesaName>
+			<keyword>AFO</keyword>
+			<keyword>Census</keyword>
+			<keyword>Livestock</keyword>
+			<keyword>Poultry</keyword>
+			<keyword>USDA</keyword>
+			<keyword>Food</keyword>
+			<keyword>Ecosystem Services</keyword>
+			<keyword>EnviroAtlas</keyword>
+			<keyword>Environment</keyword>
+			<keyword>Environmental Atlas</keyword>
+		</themeKeys>
+		<idPurp>The purpose of this dataset is to report by county the number of farm operations with cattle and the number of heads they manage as provided by the USDA Census of Agriculture. The overall goal of EnviroAtlas is to employ and develop the best available science to map indicators of ecosystem services production, demand, and drivers for the nation.</idPurp>
+		<idAbs>This EnviroAtlas dataset summarizes by county the number of farm operations with cattle and the number of heads they manage. The data come from the Census of Agriculture, which is administered every five years by the US Department of Agriculture (USDA), and include the years 2002, 2007, 2012, and 2017. The Census classifies cattle managed on operations as beef cows, dairy cows, or other cattle (which encompasses heifers, steers, bulls, and calves). Data regarding all three categories are displayed in this layer. Operations are categorized into small, medium, or large, based on how many heads they manage. For each county and Census year, the dataset reports the number of farm operations that manage cattle, the number of heads on their property at the end of the Census year, and a breakdown of the operations into small, medium, and large. This dataset was produced by the US EPA to support research and online mapping activities related to EnviroAtlas. EnviroAtlas (https://www.epa.gov/enviroatlas) allows the user to interact with a web-based, easy-to-use, mapping application to view and analyze multiple ecosystem services for the contiguous United States. The dataset is available as downloadable data (https://edg.epa.gov/data/Public/ORD/EnviroAtlas) or as an EnviroAtlas map service. Additional descriptive information about each attribute in this dataset can be found in its associated EnviroAtlas Fact Sheet (https://www.epa.gov/enviroatlas/enviroatlas-fact-sheets).</idAbs>
+		<resConst>
+			<SecConsts>
+				<class>
+					<ClasscationCd value="001">Unclassified</ClasscationCd>
+				</class>
+				<classSys>https://project-open-data.github.io/schema/#accessLevel</classSys>
+			</SecConsts>
+		</resConst>
+		<envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 22000) ; Esri ArcGIS 13.1.2.41833</envirDesc>
+		<spatRpType>
+			<SpatRepTypCd value="001" Sync="TRUE"/>
+		</spatRpType>
+		<dataExt>
+			<geoEle xmlns="">
+				<GeoBndBox esriExtentType="search">
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+					<westBL Sync="TRUE">-179.147340</westBL>
+					<eastBL Sync="TRUE">-66.949895</eastBL>
+					<northBL Sync="TRUE">71.352561</northBL>
+					<southBL Sync="TRUE">18.917466</southBL>
+				</GeoBndBox>
+			</geoEle>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2002-12-31T00:00:00</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2007-12-31T00:00:00</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2012-12-31T00:00:00</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2017-12-31T00:00:00</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+		</dataExt>
+		<tpCat>
+			<TopicCatCd value="007"/>
+		</tpCat>
+		<tpCat>
+			<TopicCatCd value="001"/>
+		</tpCat>
+		<tpCat>
+			<TopicCatCd value="005"/>
+		</tpCat>
+		<tpCat>
+			<TopicCatCd value="009"/>
+		</tpCat>
+	</dataIdInfo>
+	<mdMaint>
+		<maintFreq>
+			<MaintFreqCd value="009"/>
+		</maintFreq>
+	</mdMaint>
+	<dqInfo>
+		<dqScope>
+			<scpLvl>
+				<ScopeCd value="005"/>
+			</scpLvl>
+		</dqScope>
+		<report type="DQConcConsis" dimension="">
+			<measDesc>Tests for integrity have not been performed.</measDesc>
+			<measResult>
+				<ConResult>
+					<conSpec>
+						<resTitle>EPA National Geospatial Data Policy</resTitle>
+					</conSpec>
+					<conExpl>Features have been reviewed by U.S. EPA EnviroAtlas Project Managers for public release.</conExpl>
+					<conPass>1</conPass>
+				</ConResult>
+			</measResult>
+		</report>
+		<report type="DQCompOm" dimension="">
+			<measDesc>Features represented have not been tested for completeness</measDesc>
+			<measResult>
+				<ConResult>
+					<conSpec>
+						<resTitle>EPA National Geospatial Data Policy</resTitle>
+					</conSpec>
+					<conExpl>Features have been reviewed by U.S. EPA EnviroAtlas Project Managers for public release.</conExpl>
+					<conPass>1</conPass>
+				</ConResult>
+			</measResult>
+		</report>
+		<dataLineage>
+			<prcStep>
+				<stepDesc>Data from the Census of Agriculture were downloaded from the Quick Stats API using the R package, rnassqs. The Census data included in this dataset are county-level (agg_level_desc = "COUNTY"), related to animals and products (sector_desc = "ANIMALS &amp; PRODUCTS"), and specific to cattle inventory (short_desc = "CATTLE, INCL CALVES - INVENTORY") and operations (short_desc = "CATTLE, INCL CALVES - OPERATIONS WITH INVENTORY"). The total number of operations with inventory and the total number of heads for each county and year are present in the original Census data. 
+
+In addition to the total number of operations, the Census reports the number of operations managing various count intervals of heads (e.g., number of operations with 1 to 9 heads, number of operations with 10 to 19 heads, etc.). The layer combines data from these count intervals into size categories. Operations were categorized as:
+- Small, if they managed 1-49 heads 
+- Medium, if they managed 50-199 heads
+- Large, if they managed 200 or more heads 
+</stepDesc><stepDateTm>2022-01-26T00:00:00</stepDateTm>
+				<stepSrc type="used" xmlns="">
+					<srcDesc>The National Agricultural Statistics Service (NASS) provides official published aggregate estimates related to agricultural production through the Quick Stats interface. These data include the Census of Agriculture.</srcDesc>
+					<srcCitatn xmlns="">
+						<resTitle>Quick Stats API</resTitle>
+						<citOnlineRes xmlns="">
+							<linkage>https://quickstats.nass.usda.gov/</linkage>
+							<protocol>service</protocol>
+							<orName>Quick Stats API</orName>
+						</citOnlineRes>
+					</srcCitatn>
+				</stepSrc>
+				<stepSrc type="used" xmlns="">
+					<srcDesc>The Census of Agriculture is a complete count of U.S. farms and ranches and the people who operate them. Administered by the U.S. Department of Agriculture every five years, the Census provides the only source of uniform, comprehensive agricultural data for every county in the United States.</srcDesc>
+					<srcCitatn xmlns="">
+						<resTitle>USDA Census of Agriculture</resTitle>
+						<citOnlineRes xmlns="">
+							<linkage>https://www.nass.usda.gov/AgCensus/</linkage>
+							<protocol>information</protocol>
+							<orName>USDA Census of Agriculture</orName>
+							<orFunct>
+								<OnFunctCd value="002"/>
+							</orFunct>
+						</citOnlineRes>
+					</srcCitatn>
+				</stepSrc>
+			</prcStep>
+		</dataLineage>
+	</dqInfo>
+	<Esri>
+		<scaleRange>
+			<minScale>150000000</minScale>
+			<maxScale>5000</maxScale>
+		</scaleRange>
+		<DataProperties>
+			<itemProps>
+				<imsContentType export="False" Sync="TRUE">002</imsContentType>
+				<itemName Sync="TRUE">cattle</itemName>
+				<nativeExtBox>
+					<westBL Sync="TRUE">-19942590.665800</westBL>
+					<eastBL Sync="TRUE">-7452828.220100</eastBL>
+					<southBL Sync="TRUE">2145221.304200</southBL>
+					<northBL Sync="TRUE">11523911.944300</northBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</nativeExtBox>
+				<itemLocation>
+					<linkage Sync="TRUE">file://\\LZ26MCULLER\C$\Users\mculler\OneDrive - Environmental Protection Agency (EPA)\Profile\Documents\_QC\Data\usda_ag_census_correction\2_Editing\old\usda_ag_census.gdb</linkage>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+				</itemLocation>
+			</itemProps>
+			<coordRef>
+				<type Sync="TRUE">Projected</type>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+				<csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+				<projcsn Sync="TRUE">WGS_1984_Web_Mercator_Auxiliary_Sphere</projcsn>
+				<peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.1.0'&gt;&lt;WKT&gt;PROJCS[&amp;quot;WGS_1984_Web_Mercator_Auxiliary_Sphere&amp;quot;,GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Mercator_Auxiliary_Sphere&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,0.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,0.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,0.0],PARAMETER[&amp;quot;Auxiliary_Sphere_Type&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3857]]&lt;/WKT&gt;&lt;XOrigin&gt;-20037700&lt;/XOrigin&gt;&lt;YOrigin&gt;-30241100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102100&lt;/WKID&gt;&lt;LatestWKID&gt;3857&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+			</coordRef>
+		</DataProperties>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<ArcGISProfile>ISO19115_3</ArcGISProfile>
+		<SyncDate>20230808</SyncDate>
+		<SyncTime>11271000</SyncTime>
+		<ModDate>20230808</ModDate>
+		<ModTime>11271000</ModTime>
+	</Esri>
+	<mdLang>
+		<languageCode value="eng"/>
+		<countryCode value="USA" Sync="TRUE"/>
+	</mdLang>
+	<mdFileID>C9412C2D-3645-4C19-9B12-EC05A256881C</mdFileID>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<refSysInfo>
+		<RefSystem dimension="">
+			<refSysID>
+				<identCode code="3857" Sync="TRUE"/>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+				<idVersion Sync="TRUE">6.18.3(9.3.1.2)</idVersion>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="cattle"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">3079</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<spdoinfo>
+		<ptvctinf><esriterm Name="cattle"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">3079</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+</metadata>

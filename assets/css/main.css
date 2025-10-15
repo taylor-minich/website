@@ -1,3 +1,5 @@
+/* Author: Chase Nuñez */
+
 @import url("https://web.archive.org/web/20210415202851cs_/https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Arimo:400,700");
 
 
@@ -2947,8 +2949,8 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #3d4448;
-		border-radius: 0.375em;
+		background-color: #3a4842;
+		border-radius: 0.35em;
 		border: 0;
 		box-shadow: inset 0 0 0 2px ;
 		color: #FFFFFF !important;
@@ -2960,7 +2962,7 @@
 		height: 3.5em;
 		letter-spacing: 0.075em;
 		line-height: 3.5em;
-		padding: 0 2.25em;
+		padding: 0 1.25em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -3024,7 +3026,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #3d4448;
+			background-color: #3a4842;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3805,7 +3807,7 @@
 		#header .logo {
 			border-bottom: 0;
 			color: inherit;
-			font-family: "Arimo", serif;
+			font-family: "Arimo", sans-serif;
 			font-size: 1.125em;
 		}
 
@@ -3828,13 +3830,13 @@
 			}
 
 				#header .logo {
-					font-size: 1.25em;
+					font-size: 1.125em;
 					margin: 0;
 				}
 
 				#header .icons {
-					height: 5em;
-					line-height: 5em;
+					height: 6em;
+					line-height: 6em;
 					position: absolute;
 					right: -0.5em;
 					top: 0;
